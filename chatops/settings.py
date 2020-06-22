@@ -104,6 +104,17 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+CACHES = {
+    'default': {
+        'BACKEND': 'django_redis.cache.RedisCache',
+        'LOCATION': 'redis://47.103.14.52:6380',
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+             "PASSWORD": "qwe@123..asd",
+        },
+    },
+}
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
@@ -117,7 +128,7 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-ZABBIX_URL="http://47.103.14.52:8088/api_jsonrpc.php"
+ZABBIX_URL="http://47.103.14.52:8080/api_jsonrpc.php"
 ZABBIX_USER="Admin"
 ZABBIX_PASSWORD="zabbix"
 # Static files (CSS, JavaScript, Images)

@@ -18,5 +18,6 @@ from django.urls import path
 from dingding import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('dingding',views.robot,name='robot')
+    path('dingding',views.robot,name='robot'),
+    path('web',views.robot,name='web'),
 ]
